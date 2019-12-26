@@ -6,7 +6,6 @@ import java.util.List;
 public class Validation {
 
     protected List<String> validaPessoa(Pessoa pessoa) {
-
         List<String> constraints = new ArrayList<String>();
         if (pessoa != null && pessoa.cpf != null && pessoa.name != null && pessoa.telefonesFixos != null) {
             for (String telefone : pessoa.telefonesFixos) {
@@ -15,14 +14,14 @@ public class Validation {
                     return constraints;
                 } else {
                     if (telefone.length() < 7) {
-                        constraints.add("Erro - Telefone inválido"); {
+                        constraints.add("Erro - Telefone inválido");
+                        {
                             return constraints;
                         }
                     } else {
                         constraints.add("Erro - Telefone inválido");
                     }
                 }
-
             }
         }
         return constraints;

@@ -20,7 +20,6 @@ public class CPF {
             //para o segundo digito repita o procedimento incluindo o primeiro digito calculado no passo anterior.
             d2 = d2 + (12 - nCount) * digitoCPF;
         }
-        ;
 
         //Primeiro resto da divisao por 11.
         resto = (d1 % 11);
@@ -51,10 +50,4 @@ public class CPF {
         //comparar o digito verificador do cpf com o primeiro resto + o segundo resto.
         return nDigVerific.equals(nDigResult);
     }
-
-
-    public static void main(String[] args) {
-        System.out.println(CPF("04624193806"));
-    }
-
 }
